@@ -20,6 +20,10 @@
  box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   font-family: "PT Sans", "Arial", sans-serif;
   font-weight: 400;
@@ -27,6 +31,7 @@ body {
   line-height: 21px;
   color: #333333;
   background-color: #F2F2F2;
+  margin: 0;
 }
 
 .visually-hidden {
@@ -40,6 +45,16 @@ body {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  min-height: 100%;
+  width: 1200px;
+  background: #FFFFFF;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .page-header {
@@ -190,6 +205,10 @@ body {
   margin-right: 70px;
 }
 
+.main-index {
+  flex-grow: 1;
+}
+
 .welcome {
   text-align: center;
   background-color: #ffffff;
@@ -228,11 +247,14 @@ body {
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
+  padding: 0 27px;
 }
 
 .advantages-list {
   text-align: center;
-  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .advantages-item {
@@ -266,7 +288,8 @@ body {
 }
 
 .recommendation-list {
-  margin: 0;
+  padding: 0%;
+  display: flex;
 }
 
 .recommendation-bold {
@@ -387,10 +410,18 @@ line-height: 26px;
 
 .page-footer {
   background-color: #ffffff;
+  width: 1200px;
+  min-height: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .social-list {
   margin: 0;
+  padding: 0;
+  display: flex;
+  margin-left: 70px;
 }
 
 .social-item {
@@ -427,6 +458,12 @@ line-height: 26px;
   text-align: center;
 }
 
+.footer-contacts {
+  width: 720px;
+  height: 50px;
+  text-align: center;
+}
+
 .contacts-tel {
   font-size: 40px;
   line-height: 40px;
@@ -434,6 +471,14 @@ line-height: 26px;
   text-transform: uppercase;
   color: #000000;
   text-decoration: none;
+}
+
+.logo-htmlacademy {
+  display: block;
+}
+
+.logo-htmlacademy img {
+  margin-right: 70px;
 }
 
 
@@ -576,6 +621,10 @@ line-height: 26px;
 .pagination-item {
   list-style: none;
   display: inline-block;
+}
+
+.pagination-item:not(:last-child) {
+  margin-right: 8px;
 }
 
 .pagination-link {
