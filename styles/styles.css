@@ -83,14 +83,15 @@ body {
 
 .nav-list {
   margin: 0;
+  padding: 0;
   display: flex;
   vertical-align: top;
-  padding: 0;
 }
 
 .nav-user-list {
   display: flex;
   margin: 0 20px 0 auto;
+  padding: 0;
   align-items: center;
 }
 
@@ -214,6 +215,10 @@ body {
   background-color: #ffffff;
 }
 
+.welcome-sedona {
+  margin: 51px auto 82px;
+}
+
 .welcome-image-wrapper {
   background-image: url("../images/divider.svg"),
   url("../images/index-background.jpg");
@@ -221,6 +226,7 @@ body {
   background-position: center bottom, center;
   background-size: auto, cover;
   background-color: #ffffff;
+  height: 485px;
 }
 
 .welcome-title {
@@ -252,6 +258,7 @@ body {
 
 .advantages-list {
   text-align: center;
+  margin: 0;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
@@ -288,7 +295,8 @@ body {
 }
 
 .recommendation-list {
-  padding: 0%;
+  margin: 0;
+  padding: 0;
   display: flex;
 }
 
@@ -558,6 +566,11 @@ line-height: 26px;
   background-color: #ffffff;
 }
 
+.hotel-cards-list {
+  margin: 0;
+  padding: 0;
+}
+
 .hotel-card {
   list-style: none;
 }
@@ -616,6 +629,11 @@ line-height: 26px;
 
 .pagination-container {
   background-color: #ffffff;
+}
+
+.pagination-list {
+  margin: 0;
+  padding: 0;
 }
 
 .pagination-item {
