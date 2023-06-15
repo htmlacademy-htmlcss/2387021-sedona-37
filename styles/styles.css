@@ -51,7 +51,7 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  min-height: 100%;
+  min-height: 100vh;
   width: 1200px;
   background: #FFFFFF;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
@@ -227,6 +227,7 @@ body {
   background-size: auto, cover;
   background-color: #ffffff;
   height: 485px;
+  margin-bottom: 69px;
 }
 
 .welcome-title {
@@ -235,16 +236,19 @@ body {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+  margin: 0 0 25px 0;
 }
 
 .welcome-description {
   font-size: 22px;
   line-height: 26px;
   color: #333333;
+  margin: 0 0 69px 0;
 }
 
 .advantages {
   background-color: #ffffff;
+  margin-bottom: 64px;
 }
 
 .advantages-title {
@@ -254,6 +258,18 @@ body {
   line-height: 28px;
   text-transform: uppercase;
   padding: 0 27px;
+  margin: 0 0 30px 0;
+}
+
+.decor-line {
+  width: 60px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.3);
+  margin: 0 85px 30px 85px;
+}
+
+.advantages-description {
+  margin: 0;
 }
 
 .advantages-list {
@@ -268,7 +284,18 @@ body {
   list-style: none;
   width: 400px;
   min-height: 385px;
-  padding: 103px 85px;
+  padding: 102px 85px;
+}
+
+.wrapper-town,
+.wrapper-devil {
+  padding: 102px 85px;
+}
+
+.advantages-item:nth-child(1),
+.advantages-item:nth-child(5) {
+  display: flex;
+  padding: 0;
 }
 
 .advantages-item-blue {
@@ -294,23 +321,25 @@ body {
   background-color: #ffffff;
 }
 
-.recommendation-list {
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-
 .recommendation-bold {
   color: #000000;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+  margin-bottom: 20px;
 }
 
 .recommendation-description {
 font-size: 22px;
 line-height: 26px;
+margin: 0 0 64px 0;
+}
+
+.recommendation-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
 
 .recommendation-item {
@@ -332,14 +361,12 @@ line-height: 26px;
 .recommendation-item:nth-child(2) {
   background-image: url("../images/icons/icon-food.svg");
   background-repeat: no-repeat;
-  background-position: center;
   background-position: 163px 81px;
 }
 
 .recommendation-item:nth-child(3) {
   background-image: url("../images/icons/icon-present.svg");
   background-repeat: no-repeat;
-  background-position: center;
   background-position: 163px 81px;
 }
 
@@ -349,11 +376,12 @@ line-height: 26px;
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
-  padding-top: 183px;
-  margin: 0 0 30px 0;
+  padding: 183px 0 30px 0;
+  margin: 0;
 }
 
 .recommendation-item p {
+  margin: 0;
   padding: 0 85px;
 }
 
@@ -391,6 +419,7 @@ line-height: 26px;
   background-color: #756157;
   text-align: center;
   color: #ffffff;
+  min-height: 415px;
 }
 
 .subscribe-title {
@@ -414,6 +443,18 @@ line-height: 26px;
   color: #ffffff;
   border: none;
   border-radius: 0 4px 4px 0;
+}
+
+.subscribe-form input[type="email"] {
+  width: 452px;
+  height: 52px;
+  font-size: 18px;
+  line-height: 24px;
+  align-items: center;
+  color: #000000;
+  background: #F2F2F2;
+  border-radius: 4px 0 0 4px;
+  border: 0;
 }
 
 .page-footer {
@@ -569,17 +610,19 @@ line-height: 26px;
 .hotel-cards-list {
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 40px 70px;
 }
 
 .hotel-card {
   list-style: none;
-}
-
-.hotel-card-title {
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 28px;
-  color: #000000;
+  width: 340px;
+  height: 438px;
+  border: 1px solid #E6E6E6;
+  border-radius: 4px;
+  padding: 20px;
 }
 
 .hotel-card-img {
@@ -589,6 +632,30 @@ line-height: 26px;
 .hotel-card-link {
   text-decoration: none;
   display: block;
+}
+
+.hotel-card-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+  padding: 16px 0;
+  margin: 0;
+}
+
+.product-card-status {
+  margin: 0;
+  width: 140px;
+  height: 21px;
+}
+
+.product-card-info {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-card-price {
+  margin: 0 0 0 auto;
 }
 
 .button-about {
@@ -634,11 +701,11 @@ line-height: 26px;
 .pagination-list {
   margin: 0;
   padding: 0;
+  display: flex;
 }
 
 .pagination-item {
   list-style: none;
-  display: inline-block;
 }
 
 .pagination-item:not(:last-child) {
