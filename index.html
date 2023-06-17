@@ -45,8 +45,7 @@
       <main class="main-index">
         <section class="welcome">
           <div class="welcome-image-wrapper">
-            <img class="welcome-sedona" src="images/welcome.svg" width="458" height="352"
-              alt="Добро пожаловать в Седону!">
+            <img class="welcome-sedona" src="images/welcome.svg" width="458" height="352" alt="Добро пожаловать в Седону!">
           </div>
           <h1 class="visually-hidden">Город Седона</h1>
           <h2 class="welcome-title">Седона — небольшой городок в Аризоне,<br>
@@ -58,11 +57,13 @@
           <h2 class="visually-hidden">Преимущества</h2>
           <ul class="advantages-list">
             <li class="advantages-item advantages-item-blue">
-              <h3 class="advantages-title">НАСТОЯЩИЙ ГОРОДОК</h3>
-              <div class="decor-line"></div>
-              <p class="advantages-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+              <div class="advantages-wrapper">
+                <h3 class="advantages-title">НАСТОЯЩИЙ ГОРОДОК</h3>
+                <div class="decor-line"></div>
+                <p class="advantages-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+              </div>
+              <img class="img-sedona" src="images/town-sedona.jpg" width="800" height="385" alt="Городок Седона.">
             </li>
-            <img class="img-sedona" src="images/town-sedona.jpg" width="800" height="385" alt="Городок Седона.">
             <li class="advantages-item advantages-item-light">
               <h3 class="advantages-title">НЕБОЛЬШАЯ ПЛОЩАДЬ</h3>
               <div class="decor-line"></div>
@@ -78,11 +79,13 @@
               <div class="decor-line"></div>
               <p class="advantages-description">Большинство едет в Гранд Каньон и толпится там</p>
             </li>
-            <img class="img-bridge" src="images/devils-bridge.jpg" width="800" height="385" alt="Мост дьявола.">
             <li class="advantages-item advantages-item-blue">
-              <h3 class="advantages-title">ТАМ ЕСТЬ МОСТ ДЬЯВОЛА</h3>
-              <div class="decor-line"></div>
-              <p class="advantages-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+              <img class="img-bridge" src="images/devils-bridge.jpg" width="800" height="385" alt="Мост дьявола.">
+              <div class="advantages-wrapper">
+                <h3 class="advantages-title">ТАМ ЕСТЬ МОСТ ДЬЯВОЛА</h3>
+                <div class="decor-line"></div>
+                <p class="advantages-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+            </div>
             </li>
           </ul>
         </section>
@@ -119,8 +122,7 @@
           <p class="subscribe-description">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
           <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
             <label class="visually-hidden" for="subscribe-email">E-mail</label>
-            <input class="field" type="email" placeholder="Ваш e-mail" id="subscribe-email" name="subscribe-email"
-              required>
+            <input class="field" type="email" placeholder="Ваш e-mail" id="subscribe-email" name="subscribe-email" required>
             <button class="button button-subscribe" type="submit">ПОДПИСАТЬСЯ</button>
           </form>
         </section>
