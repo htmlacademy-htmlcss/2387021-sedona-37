@@ -439,12 +439,13 @@ margin: 0 0 64px 0;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
-  margin: 0;
+  margin: 0 0 20px 0;
 }
 
 .subscribe-description {
   font-size: 22px;
   line-height: 26px;
+  margin: 0 0 54px 0;
 }
 
 .subscribe-form {
@@ -561,7 +562,7 @@ margin: 0 0 64px 0;
   font-weight: 700;
   font-size: 60px;
   line-height: 78px;
-  margin: 0;
+  margin: 0 0 8px 0;
 }
 
 .breadcrumbs-list {
@@ -603,16 +604,13 @@ margin: 0 0 64px 0;
 .filter-wrapper {
   display: flex;
   justify-content: space-between;
+  gap: 70px;
 }
 
 .catalog-filter-group {
   border: none;
   margin: 0 ;
   padding: 0;
-}
-
-.catalog-filter-group:nth-of-type(1) {
-  margin-right: 70px;
 }
 
 .catalog-filter-list {
@@ -769,10 +767,11 @@ border-color: #000000;
 
 .hotel-cards {
   background-color: #ffffff;
+  margin-bottom: 80px;
 }
 
 .hotel-cards-list {
-  margin: 0 0 40px 0;
+  margin: 0;
   padding: 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr ;
@@ -788,7 +787,7 @@ border-color: #000000;
   padding: 20px;
   display: grid;
   grid-template-columns: repeat(2, 140px);
-  grid-template-rows: 212px auto 21px 36px 37px;
+ /* grid-template-rows: 212px auto 21px 36px 37px; */
   gap: 16px 20px;
 }
 
@@ -801,6 +800,10 @@ border-color: #000000;
 .hotel-card-link:nth-of-type(2) {
   grid-column: 1/-1;
   grid-row: 2/3;
+}
+
+.hotel-card-img {
+  display: block;
 }
 
 .hotel-card-title {
