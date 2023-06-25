@@ -34,6 +34,12 @@ body {
   margin: 0;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -305,12 +311,6 @@ body {
 
 .advantages-description {
   margin: 0;
-}
-
-.img-sedona,
-.img-bridge {
-  height: 100%;
-  object-fit: cover;
 }
 
 .advantages-item-blue {
@@ -651,9 +651,17 @@ margin: 0 0 64px 0;
   margin-bottom: 36px;
 }
 
+.catalog-filter-label {
+  position: relative;
+}
+
 .label-wrapper {
   line-height: 24px;
   color: #000000;
+  position: absolute;
+  z-index: 1;
+  right: 20px;
+  top: 0;
 }
 
 .range {
@@ -665,6 +673,7 @@ margin: 0 0 64px 0;
   width: 143px;
   height: 48px;
   background-color:  #F2F2F2;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
@@ -730,6 +739,7 @@ margin: 0 0 64px 0;
 .select-control {
   width: 292px;
   height: 49px;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
   line-height: 21px;
   color: #333333;
@@ -842,7 +852,6 @@ border-color: #000000;
 .product-card-status {
   margin: 0;
   width: 140px;
-  height: 21px;
 }
 /*
 .product-card-info {
@@ -893,15 +902,15 @@ border-color: #000000;
 }
 
 .stars-3 {
-  width: 66px;
+  width: 62px;
 }
 
 .stars-4 {
-  width: 90px;
+  width: 86px;
 }
 
 .stars-5 {
-  width: 114px;
+  width: 110px;
 }
 
 .product-card-rating {
