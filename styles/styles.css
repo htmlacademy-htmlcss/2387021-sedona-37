@@ -288,7 +288,7 @@ body {
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
-  margin: 0 auto 30px;
+  margin: 0 auto 62px;
 }
 
 .decor-line {
@@ -564,6 +564,7 @@ margin: 0 0 64px 0;
   background-color: #756157;
   color: #ffffff;
   padding: 35px 70px 70px;
+  min-height: 412px;
 }
 
 .catalog-title {
@@ -617,14 +618,24 @@ margin: 0 0 64px 0;
   gap: 70px;
 }
 
-.catalog-filter-group {
-  border: none;
-  margin: 0 ;
+.catalog-filter-list {
+  margin: 0;
   padding: 0;
 }
 
-.catalog-filter-list {
-  margin: 0;
+.catalog-filter-item {
+  line-height: 23px;
+  list-style: none;
+  margin-bottom: 16px;
+}
+
+.catalog-filter-item:last-child {
+  margin-bottom: 0;
+}
+
+.catalog-filter-group {
+  border: none;
+  margin: 0 ;
   padding: 0;
 }
 
@@ -636,15 +647,18 @@ margin: 0 0 64px 0;
   padding: 0;
 }
 
-.catalog-filter-item {
-  line-height: 23px;
-  list-style: none;
-  margin-bottom: 16px;
+.range-wrapper-inputs {
+  margin-bottom: 36px;
 }
 
 .label-wrapper {
   line-height: 24px;
   color: #000000;
+}
+
+.range {
+  display: flex;
+  height: 20px;
 }
 
 .range-input {
@@ -679,7 +693,7 @@ margin: 0 0 64px 0;
 .catalog-filter-buttons {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  margin-top: 56px;
 }
 
 .button-accept {
