@@ -539,7 +539,6 @@ padding: 0 30px;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
-  align-items: center;
   color: #000000;
   background: #F2F2F2;
   border-radius: 4px 0 0 4px;
@@ -630,6 +629,18 @@ padding: 0 30px;
   display: flex;
 }
 
+.logo-htmlacademy:hover path,
+.logo-htmlacademy:focus path,
+.contacts-tel:hover path,
+.contacts-tel:focus path {
+  fill: rgba(117, 97, 87, 1);
+}
+
+.logo-htmlacademy:active path,
+.contacts-tel:active path {
+  fill: rgba(117, 97, 87, 0.3);
+}
+
 .filter-container {
   background-image: url("../images/filter-background.jpg");
   background-repeat: no-repeat;
@@ -678,6 +689,14 @@ padding: 0 30px;
   font-size: 16px;
   line-height: 21px;
   text-decoration: none;
+}
+
+.breadcrumbs-link:hover {
+  opacity: 0.6;
+}
+
+.breadcrumbs-link:active {
+  opacity: 0.3;
 }
 
 .home-link {
@@ -738,8 +757,8 @@ padding: 0 30px;
   position: relative;
 }
 
-.catalog-filter-label:first-child {
-  margin-right: 2px;
+.catalog-filter-label + .catalog-filter-label {
+  margin-left: 2px;
 }
 
 .label-wrapper {
