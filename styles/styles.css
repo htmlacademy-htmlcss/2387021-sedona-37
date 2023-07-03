@@ -80,7 +80,6 @@ img {
 
 .logo-link {
   text-decoration: none;
-  display: block;
   position: absolute;
   top: 0;
   left: 70px;
@@ -180,6 +179,13 @@ img {
   height: 64px;
   position: relative;
   text-align: center;
+  transition: all 0.3s ease;
+}
+
+.nav-user-item:hover {
+  background-color: rgba(227, 240, 248, 0.7);
+  box-shadow: 0 0 3px 0 rgba(205, 228, 242, 0.8);
+  transition: all 0.3s ease;
 }
 
 .nav-user-number {
@@ -191,7 +197,6 @@ img {
   border-radius: 10px;
   color: #ffffff;
   background-color: #7DB54F;
-  display: block;
   position: absolute;
   left: 20px;
   top: 11px;
@@ -214,8 +219,6 @@ img {
   cursor: pointer;
 }
 
-.button:visited {}
-
 .button:hover {
  background-color: #615048;
 }
@@ -228,6 +231,16 @@ img {
 .button:active {
   background-color: #756157;
   color: rgba(255, 255, 255, 0.3);
+}
+
+.button:disabled {
+  background-color: #e5e5e5;
+}
+
+.button:disabled:hover {
+  background-color: #e5e5e5;
+  outline: none;
+  cursor: default;
 }
 
 .button-wanthere {
@@ -603,6 +616,21 @@ padding: 0 30px;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: "PT Sans", "Arial", sans-serif;
+  color: #000000;
+  font-size: 40px;
+  line-height: 40px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.contacts-tel:hover,
+.contacts-tel:focus {
+  color: #756157;
+}
+
+.contacts-tel:active {
+  color: rgba(117, 97, 87, 0.3);
 }
 
 .copyright {
@@ -615,14 +643,11 @@ padding: 0 30px;
 }
 
 .logo-htmlacademy:hover path,
-.logo-htmlacademy:focus path,
-.contacts-tel:hover path,
-.contacts-tel:focus path {
+.logo-htmlacademy:focus path {
   fill: rgba(117, 97, 87, 1);
 }
 
-.logo-htmlacademy:active path,
-.contacts-tel:active path {
+.logo-htmlacademy:active path {
   fill: rgba(117, 97, 87, 0.3);
 }
 
@@ -780,9 +805,8 @@ padding: 0 30px;
   background-color: #e6e6e6;;
 }
 
-.range-input:focus {
-  outline: none;
-  border: 3px solid #83e3d3;
+.range-input:focus-visible {
+  outline: 3px solid #83e3d3;
   background: #e6e6e6;
 }
 
@@ -875,6 +899,7 @@ padding: 0 30px;
   line-height: 21px;
   color: #333333;
   border: 2px solid #e5e5e5;
+  border-radius: 4px;
   padding-left: 20px;
   margin-left: auto;
   margin-right: 70px;
@@ -981,7 +1006,7 @@ border-color: #000000;
   list-style: none;
   width: 340px;
   min-height: 438px;
-  border: 1px solid #E6E6E6;
+  outline: 1px solid #E6E6E6;
   border-radius: 4px;
   padding: 20px;
   display: grid;
@@ -1078,19 +1103,19 @@ border-color: #000000;
 }
 
 .stars-2 {
-  width: 42px;
+  width: 43px;
 }
 
 .stars-3 {
-  width: 62px;
+  width: 63px;
 }
 
 .stars-4 {
-  width: 86px;
+  width: 88px;
 }
 
 .stars-5 {
-  width: 110px;
+  width: 112px;
 }
 
 .product-card-rating {
@@ -1102,7 +1127,7 @@ border-color: #000000;
   background: #F2F2F2;
   border-radius: 4px;
   min-width: 140px;
-  min-height: 37px;
+  height: 37px;
   display: block;
   padding: 9px 15px;
 }
