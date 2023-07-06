@@ -182,6 +182,73 @@
         </section>
       </footer>
     </div>
+
+    <div class="modal-container modal-closed">
+      <div class="modal modal-search">
+        <button class="modal-close-button" type="button">
+          <span class="visually-hidden">Закрыть</span>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14 1.3 12.7 0 7 5.7 1.3 0 0 1.3 5.7 7 0 12.7 1.3 14 7 8.3l5.7 5.7 1.3-1.3L8.3 7 14 1.3Z"
+              fill="#000" />
+          </svg>
+        </button>
+        <div class="modal-content">
+          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+          <form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
+            <p class="field-group">
+              <label class="search-label" for="arrival-date">Дата Заезда:</label>
+              <input class="search-input field" type="text" id="arrival-date" name="arrival-date"
+                placeholder="27 апреля 2020">
+              <span class="wrong-date">Мы не можем отправить вас в прошлое.</span>
+            </p>
+            <p class="field-group">
+              <label class="search-label" for="departure-date">Дата Выезда:</label>
+              <input class="search-input field" type="text" id="departure-date" name="departure-date"
+                placeholder="1 сентября 2023">
+              <span class="free-date">На эти даты есть свободные номера. Пока есть.</span>
+            </p>
+            <div class="quantity-group">
+              <p class="adults-group">
+                <label class="quantity-label quantity-label-adults" for="adults">Взрослые:</label>
+                <button class="adults-minus counter" type="button">
+                  <span class="visually-hidden">Уменьшить</span>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 9v2h14V9H3Z" fill="#756157" fill-opacity=".3" />
+                  </svg>
+                </button>
+                <input class="quantity-input field" type="number" id="adults" name="adults" min="0" value="2">
+                <button class="adults-plus counter" type="button">
+                  <span class="visually-hidden">Увеличить</span>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z" fill="#756157" fill-opacity=".3" />
+                  </svg>
+                </button>
+              </p>
+              <p class="children-group">
+                <label class="quantity-label quantity-label-children" for="children">Дети:</label>
+                <button class="modal-info" type="button">
+                  <span class="visually-hidden">Дополнительная информация</span>
+                </button>
+                <button class="children-minus counter" type="button">
+                  <span class="visually-hidden">Уменьшить</span>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 9v2h14V9H3Z" fill="#756157" fill-opacity=".3" />
+                  </svg>
+                </button>
+                <input class="quantity-input field" type="number" id="children" name="children" min="0" value="2">
+                <button class="children-plus counter" type="button">
+                  <span class="visually-hidden">Увеличить</span>
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z" fill="#756157" fill-opacity=".3" />
+                  </svg>
+                </button>
+              </p>
+            </div>
+            <button class="button button-modal-search" type="submit">Найти</button>
+          </form>
+        </div>
+      </div>
+    </div>
   </body>
 
 </html>
