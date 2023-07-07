@@ -64,20 +64,23 @@
                   <ul class="catalog-filter-list">
                     <li class="catalog-filter-item">
                       <label class="catalog-label">
-                        <input class="catalog-input" type="checkbox" name="swimming-pool" value="swimming-pool" checked>
-                        Бассейн
+                        <input class="visually-hidden catalog-input" type="checkbox" name="swimming-pool" value="swimming-pool" checked>
+                        <span class="catalog-mark"></span>
+                        <span class="catalog-span">Бассейн</span>
                       </label>
                     </li>
                     <li class="catalog-filter-item">
                       <label class="catalog-label">
-                        <input class="catalog-input" type="checkbox" name="parking" value="parking" checked>
-                        Парковка
+                        <input class="visually-hidden catalog-input" type="checkbox" name="parking" value="parking" checked>
+                        <span class="catalog-mark"></span>
+                        <span class="catalog-span">Парковка</span>
                       </label>
                     </li>
                     <li class="catalog-filter-item">
                       <label class="catalog-label">
-                        <input class="catalog-input" type="checkbox" name="Wi-Fi" value="Wi-Fi">
-                        Бассейн
+                        <input class="visually-hidden catalog-input" type="checkbox" name="Wi-Fi" value="Wi-Fi">
+                        <span class="catalog-mark"></span>
+                        <span class="catalog-span">Wi-Fi</span>
                       </label>
                     </li>
                   </ul>
@@ -88,20 +91,23 @@
                   <ul class="catalog-filter-list">
                     <li class="catalog-filter-item">
                       <label class="catalog-label">
-                        <input class="catalog-input" type="radio" name="type-of-housing" value="hotel" checked>
-                        Гостиница
+                        <input class="visually-hidden catalog-input" type="radio" name="type-of-housing" value="hotel" checked>
+                        <span class="catalog-mark"></span>
+                        <span class="catalog-span">Гостиница</span>
                       </label>
                     </li>
                     <li class="catalog-filter-item">
                       <label class="catalog-label">
-                        <input class="catalog-input" type="radio" name="type-of-housing" value="motel">
-                        Мотель
+                        <input class="visually-hidden catalog-input" type="radio" name="type-of-housing" value="motel">
+                        <span class="catalog-mark"></span>
+                        <span class="catalog-span">Мотель</span>
                       </label>
                     </li>
                     <li class="catalog-filter-item">
                       <label class="catalog-label">
-                        <input class="catalog-input" type="radio" name="type-of-housing" value="apartments">
-                        Апартаменты
+                        <input class="visually-hidden catalog-input" type="radio" name="type-of-housing" value="apartments">
+                        <span class="catalog-mark"></span>
+                        <span class="catalog-span">Апартаменты</span>
                       </label>
                     </li>
                   </ul>
@@ -113,19 +119,23 @@
                   <legend class="catalog-filter-title">Стоимость, ₽:</legend>
                   <div class="range-wrapper-inputs">
                     <label class="catalog-filter-label">
-                      <span class="label-wrapper">от</span><input class="range-input input-min" type="number" value="0" name="min-price">
+                      <span class="label-wrapper">от</span><input class="range-input input-min" type="number" value="0"
+                        min="0" name="min-price">
                     </label>
                     <label class="catalog-filter-label">
-                      <span class="label-wrapper">до</span><input class="range-input input-max" type="number" value="9000" name="max-price">
+                      <span class="label-wrapper">до</span><input class="range-input input-max" type="number"
+                        value="9000" min="0" name="max-price">
                     </label>
                   </div>
-                  <div class="range">
-                    <button class="range-toggle toggle-min" type="button">
-                      <span class="visually-hidden">Изменить минимальную цену</span>
-                    </button>
-                    <button class="range-toggle toggle-max" type="button">
-                      <span class="visually-hidden">Изменить максимальную цену</span>
-                    </button>
+                  <div class="range-scale">
+                    <div class="range-bar" style="left: 0; width: 226px;">
+                      <button class="range-toggle toggle-min" type="button">
+                        <span class="visually-hidden">Изменить минимальную цену</span>
+                      </button>
+                      <button class="range-toggle toggle-max" type="button">
+                        <span class="visually-hidden">Изменить максимальную цену</span>
+                      </button>
+                    </div>
                   </div>
                 </fieldset>
 
