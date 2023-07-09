@@ -11,7 +11,7 @@
 
   <body>
     <div class="main-container">
-      <header class="page-header">
+      <header class="page-header" data-test="header">
         <nav class="nav">
           <a class="logo-link" href="#">
             <img class="logo-img" src="images/logo/logo-sedona.svg" width="140" height="70" alt="Логотип Седона.">
@@ -43,7 +43,7 @@
         </nav>
       </header>
 
-      <main class="main-catalog">
+      <main class="main-catalog" data-test="main">
         <div class="filter-container">
           <h1 class="catalog-title">Гостиницы Седоны</h1>
           <ul class="breadcrumbs-list">
@@ -57,7 +57,7 @@
             </li>
           </ul>
 
-          <section class="catalog-products">
+          <section class="catalog-products" data-test="filter">
             <h2 class="visually-hidden">Список товаров с фильтрами</h2>
             <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
               <div class="filter-wrapper">
@@ -147,7 +147,7 @@
           </section>
         </div>
 
-        <div class="filter-cards-wrapper">
+        <div class="filter-cards-wrapper" data-test="catalog">
           <section class="filter-results">
             <h2 class="visually-hidden">Сортировка результатов</h2>
             <p class="filter-results-title">Найдено гостиниц: <span class="filter-results-quantity">38</span></p>
@@ -276,7 +276,7 @@
           </div>
         </div>
 
-        <section class="subscribe subscribe-white">
+        <section class="subscribe subscribe-white" data-test="subscribe">
           <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
           <p class="subscribe-description">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
           <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
@@ -288,7 +288,7 @@
         </section>
       </main>
 
-      <footer class="page-footer">
+      <footer class="page-footer" data-test="footer">
         <section class="footer-social">
           <h2 class="visually-hidden">Социальные сети</h2>
           <ul class="social-list">
