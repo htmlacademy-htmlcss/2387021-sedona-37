@@ -4,13 +4,14 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
     <title>Седона: Каталог</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
 
   <body>
     <div class="main-container">
-      <header class="page-header">
+      <header class="page-header" data-test="header">
         <nav class="nav">
           <a class="logo-link" href="#">
             <img class="logo-img" src="images/logo/logo-sedona.svg" width="140" height="70" alt="Логотип Седона.">
@@ -42,7 +43,7 @@
         </nav>
       </header>
 
-      <main class="main-catalog">
+      <main class="main-catalog" data-test="main">
         <div class="filter-container">
           <h1 class="catalog-title">Гостиницы Седоны</h1>
           <ul class="breadcrumbs-list">
@@ -55,7 +56,8 @@
               <a class="breadcrumbs-link">Гостиницы</a>
             </li>
           </ul>
-          <section class="catalog-products">
+
+          <section class="catalog-products" data-test="filter">
             <h2 class="visually-hidden">Список товаров с фильтрами</h2>
             <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
               <div class="filter-wrapper">
@@ -85,7 +87,6 @@
                     </li>
                   </ul>
                 </fieldset>
-
                 <fieldset class="catalog-filter-group">
                   <legend class="catalog-filter-title">Тип Жилья:</legend>
                   <ul class="catalog-filter-list">
@@ -113,8 +114,7 @@
                   </ul>
                 </fieldset>
               </div>
-
-              <div class="filter-wrapper">
+              <div class="filter-wrapper filter-wrapper-price">
                 <fieldset class="catalog-filter-group">
                   <legend class="catalog-filter-title">Стоимость, ₽:</legend>
                   <div class="range-wrapper-inputs">
@@ -138,7 +138,6 @@
                     </div>
                   </div>
                 </fieldset>
-
                 <div class="catalog-filter-buttons">
                   <button class="button button-accept" type="submit">ПРИМЕНИТЬ</button>
                   <button class="button button-reset" type="reset">СБРОСИТЬ</button>
@@ -147,11 +146,12 @@
             </form>
           </section>
         </div>
-        <div class="filter-cards-wrapper">
+
+        <div class="filter-cards-wrapper" data-test="catalog">
           <section class="filter-results">
             <h2 class="visually-hidden">Сортировка результатов</h2>
             <p class="filter-results-title">Найдено гостиниц: <span class="filter-results-quantity">38</span></p>
-            <select class="select-control" aria-label="Сортировка">
+            <select class="select-control" aria-label="Сортировка.">
               <option value="cheap">Сначала дешевые</option>
               <option value="expensive">Сначала дорогие</option>
               <option value="popular">Сначала популярные</option>
@@ -267,7 +267,7 @@
                 <a class="pagination-link" href="#">4</a>
               </li>
               <li class="pagination-item">
-                <a class="pagination-link pagination-dots" href="#">...</a>
+                <a class="pagination-link pagination-dots">...</a>
               </li>
               <li class="pagination-item">
                 <a class="pagination-link" href="#">10</a>
@@ -275,7 +275,8 @@
             </ol>
           </div>
         </div>
-        <section class="subscribe subscribe-white">
+
+        <section class="subscribe subscribe-white" data-test="subscribe">
           <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
           <p class="subscribe-description">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
           <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
@@ -287,7 +288,7 @@
         </section>
       </main>
 
-      <footer class="page-footer">
+      <footer class="page-footer" data-test="footer">
         <section class="footer-social">
           <h2 class="visually-hidden">Социальные сети</h2>
           <ul class="social-list">
@@ -342,5 +343,4 @@
       </footer>
     </div>
   </body>
-
 </html>
