@@ -49,6 +49,7 @@ img {
   border: 0;
   padding: 0;
   white-space: nowrap;
+  -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
@@ -64,6 +65,7 @@ img {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
+/*Хедер*/
 .page-header {
   background-color: #ffffff;
   color: #000000;
@@ -113,7 +115,7 @@ img {
 
 .nav-item {
   position: relative;
-  padding: 20px 16px;
+  padding: 20px 0;
   transition: all 0.4s ease;
 }
 
@@ -134,6 +136,7 @@ img {
 }
 
 .nav-link {
+  padding: 20px 16px;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
@@ -231,6 +234,7 @@ img {
   margin-right: 70px;
 }
 
+/*Страница индекс*/
 .main-index {
   flex-grow: 1;
 }
@@ -252,6 +256,12 @@ img {
   padding: 51px 0 82px;
 }
 
+.advantages {
+  background-color: #ffffff;
+  margin-bottom: 64px;
+  text-align: center;
+}
+
 .welcome-title {
   color: #000000;
   font-weight: 700;
@@ -268,12 +278,6 @@ img {
   color: #333333;
   margin: 0 0 90px 0;
   padding: 0 30px;
-}
-
-.advantages {
-  background-color: #ffffff;
-  margin-bottom: 64px;
-  text-align: center;
 }
 
 .advantages-list {
@@ -493,33 +497,6 @@ img {
   align-items: center;
 }
 
-.button-subscribe {
-  font-size: 20px;
-  line-height: 36px;
-  min-width: 232px;
-  min-height: 52px;
-  background-color: #82b3d3;
-  color: #ffffff;
-  border: none;
-  border-radius: 0 4px 4px 0;
-}
-
-.button-subscribe:hover,
-.button-accept:hover,
-.button-favorites:hover,
-.button-subscribe:focus,
-.button-accept:focus,
-.button-favorites:focus {
-  background-color: #68a2ca;
-}
-
-.button-subscribe:active,
-.button-accept:active,
-.button-favorites:active {
-  background-color: #82b3d3;
-  color: rgb(255, 255, 255, 0.3);
-}
-
 .field {
   padding: 12px 20px;
   width: 452px;
@@ -557,6 +534,34 @@ img {
   opacity: 0.6;
 }
 
+.button-subscribe {
+  font-size: 20px;
+  line-height: 36px;
+  min-width: 232px;
+  min-height: 52px;
+  background-color: #82b3d3;
+  color: #ffffff;
+  border: none;
+  border-radius: 0 4px 4px 0;
+}
+
+.button-subscribe:hover,
+.button-accept:hover,
+.button-favorites:hover,
+.button-subscribe:focus,
+.button-accept:focus,
+.button-favorites:focus {
+  background-color: #68a2ca;
+}
+
+.button-subscribe:active,
+.button-accept:active,
+.button-favorites:active {
+  background-color: #82b3d3;
+  color: rgb(255, 255, 255, 0.3);
+}
+
+/*Футер*/
 .page-footer {
   background-color: #ffffff;
   width: 1200px;
@@ -577,7 +582,6 @@ img {
 
 .social-item {
   list-style: none;
-  display: flex;
 }
 
 .social-link {
@@ -642,6 +646,11 @@ img {
 
 .logo-htmlacademy:active path {
   fill: rgba(117, 97, 87, 0.3);
+}
+
+/*Страница каталога*/
+.main-catalog {
+  flex-grow: 1;
 }
 
 .filter-container {
@@ -738,6 +747,14 @@ img {
   padding: 0;
 }
 
+.catalog-filter-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 32px;
+  padding: 0;
+}
+
 .catalog-filter-list {
   margin: 0;
   padding: 0;
@@ -799,19 +816,11 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  content: "";
   width: 10px;
   height: 10px;
   border-radius: 50%;
   background-color: #3f5e72;
-}
-
-.catalog-filter-title {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 24px;
-  margin-bottom: 32px;
-  padding: 0;
+  content: "";
 }
 
 .range-wrapper-inputs {
@@ -995,6 +1004,16 @@ img {
   margin-bottom: 40px;
 }
 
+.filter-results-title,
+.filter-results-quantity {
+  max-width: 450px;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
 .select-control {
   width: 292px;
   height: 49px;
@@ -1009,7 +1028,6 @@ img {
   margin-left: auto;
   margin-right: 70px;
   -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   background-image: url("../images/decorations/arrow-black.svg");
   background-repeat: no-repeat;
@@ -1028,16 +1046,6 @@ img {
 .select-control:disabled {
   border: 2px solid #000000;
   opacity: 0.3;
-}
-
-.filter-results-title,
-.filter-results-quantity {
-  max-width: 450px;
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 36px;
-  text-transform: uppercase;
-  margin: 0;
 }
 
 .card-toggle-list {
@@ -1164,14 +1172,6 @@ img {
   margin: 0;
   width: 140px;
 }
-
-/*
-.product-card-info {
-  display: grid;
-  grid-template-columns: 140px 140px;
-  gap: 16px 20px;
-}
-*/
 
 .product-card-price {
   margin: 0 0 0 auto;
@@ -1351,6 +1351,7 @@ img {
   color: #333333;
 }
 
+/*Модальное окно*/
 .modal-container {
   position: fixed;
   top: 0;
@@ -1434,7 +1435,6 @@ img {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-
 .modal-title {
   margin: 0 0 64px 0;
   color: #000000;
@@ -1504,32 +1504,6 @@ img {
   align-items: center;
 }
 
-.quantity-input {
-  width: 110px;
-  height: 48px;
-  color: #000000;
-  text-align: center;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 20px;
-  border-radius: 4px;
-  -moz-appearance: textfield;
-}
-
-.quantity-input:focus {
-  outline: 3px solid #83b3d3;
-  background-color: #e6e6e6;
-}
-
-.quantity-input:disabled:hover {
-  color: #000000;
-}
-
-.quantity-input::-webkit-outer-spin-button,
-.quantity-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-}
-
 .quantity-label-adults {
   margin-right: 46px;
 }
@@ -1539,16 +1513,6 @@ img {
   display: flex;
   gap: 10px;
   align-items: center;
-}
-
-.counter {
-  position: absolute;
-  width: 40px;
-  height: 48px;
-  border: none;
-  cursor: pointer;
-  background-color: transparent;
-  justify-content: center;
 }
 
 .button-minus {
@@ -1585,6 +1549,16 @@ img {
   background-color: #000000;
 }
 
+.counter {
+  position: absolute;
+  width: 40px;
+  height: 48px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  justify-content: center;
+}
+
 .counter:focus {
   outline: 3px solid #82b3d3;
   border-radius: 4px;
@@ -1614,6 +1588,37 @@ img {
   background-color: #cdc7c4;
 }
 
+.quantity-input {
+  width: 110px;
+  height: 48px;
+  color: #000000;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 20px;
+  border-radius: 4px;
+  -moz-appearance: textfield;
+}
+
+.quantity-input:focus {
+  outline: 3px solid #83b3d3;
+  background-color: #e6e6e6;
+}
+
+.quantity-input:disabled:hover {
+  color: #000000;
+}
+
+.quantity-input::-webkit-outer-spin-button,
+.quantity-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.tooltip {
+  position: relative;
+  margin-right: 46px;
+}
+
 .modal-info {
   width: 26px;
   height: 26px;
@@ -1627,11 +1632,6 @@ img {
 
 .modal-info:hover {
   opacity: 0.7;
-}
-
-.tooltip {
-  position: relative;
-  margin-right: 46px;
 }
 
 .tooltip-text {

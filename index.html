@@ -4,8 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="favicon.ico">
-    <link rel="icon" type="image/png" href="images/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="styles/styles.css">
   </head>
@@ -57,9 +56,6 @@
           <h2 class="welcome-title">Седона — небольшой городок в Аризоне,<br>
             заслуживающий большего!</h2>
           <p class="welcome-description">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
-
-
-
           <h2 class="visually-hidden">Преимущества</h2>
           <ul class="advantages-list">
             <li class="advantages-item advantages-item-blue">
@@ -197,13 +193,13 @@
               <p class="field-group">
                 <label class="search-label" for="arrival-date">Дата Заезда:</label>
                 <input class="search-input field" type="text" id="arrival-date" name="arrival-date"
-                  placeholder="27 апреля 2020">
+                  placeholder="27 апреля 2020" required>
                 <span class="wrong-date">Мы не можем отправить вас в прошлое.</span>
               </p>
               <p class="field-group">
                 <label class="search-label" for="departure-date">Дата Выезда:</label>
                 <input class="search-input field" type="text" id="departure-date" name="departure-date"
-                  placeholder="1 сентября 2023">
+                  placeholder="1 сентября 2023" required>
                 <span class="free-date">На эти даты есть свободные номера. Пока есть.</span>
               </p>
               <div class="quantity-group">
@@ -212,29 +208,27 @@
                   <button class="button-minus counter" type="button">
                     <span class="visually-hidden">Уменьшить</span>
                   </button>
-                  <input class="quantity-input field" type="number" id="adults" name="adults" min="0" value="2">
+                  <input class="quantity-input field" type="number" id="adults" name="adults" min="0" value="2" required>
                   <button class="button-plus counter" type="button">
                     <span class="visually-hidden">Увеличить</span>
                   </button>
                 </p>
                 <p class="children-group">
-
                   <span class="quantity-label-children">
                     <label class="quantity-label quantity-label-children" for="children">Дети:</label>
                     <span class="tooltip">
-                      <button class="modal-info" type="button" aria-labelledby="tooltip-label-date">
+                      <button class="modal-info" type="button" aria-labelledby="tooltip-label-info">
                         <span class="visually-hidden">Дополнительная информация</span>
                       </button>
-                      <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите количество детей,
+                      <span class="tooltip-text" role="tooltip" id="tooltip-label-info">Укажите количество детей,
                         которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются
                         бесплатно.</span>
                     </span>
                   </span>
-
                   <button class="button-minus counter" type="button">
                     <span class="visually-hidden">Уменьшить</span>
                   </button>
-                  <input class="quantity-input field" type="number" id="children" name="children" min="0" value="2">
+                  <input class="quantity-input field" type="number" id="children" name="children" min="0" value="2" required>
                   <button class="button-plus counter" type="button">
                     <span class="visually-hidden">Увеличить</span>
                   </button>
@@ -246,8 +240,5 @@
         </div>
       </div>
     </div>
-
-
   </body>
-
 </html>

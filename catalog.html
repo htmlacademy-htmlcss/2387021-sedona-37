@@ -4,8 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="favicon.ico">
-    <link rel="icon" type="image/png" href="images/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
     <title>Седона: Каталог</title>
     <link rel="stylesheet" href="styles/styles.css">
   </head>
@@ -57,6 +56,7 @@
               <a class="breadcrumbs-link">Гостиницы</a>
             </li>
           </ul>
+
           <section class="catalog-products">
             <h2 class="visually-hidden">Список товаров с фильтрами</h2>
             <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
@@ -87,7 +87,6 @@
                     </li>
                   </ul>
                 </fieldset>
-
                 <fieldset class="catalog-filter-group">
                   <legend class="catalog-filter-title">Тип Жилья:</legend>
                   <ul class="catalog-filter-list">
@@ -115,7 +114,6 @@
                   </ul>
                 </fieldset>
               </div>
-
               <div class="filter-wrapper filter-wrapper-price">
                 <fieldset class="catalog-filter-group">
                   <legend class="catalog-filter-title">Стоимость, ₽:</legend>
@@ -140,7 +138,6 @@
                     </div>
                   </div>
                 </fieldset>
-
                 <div class="catalog-filter-buttons">
                   <button class="button button-accept" type="submit">ПРИМЕНИТЬ</button>
                   <button class="button button-reset" type="reset">СБРОСИТЬ</button>
@@ -149,11 +146,12 @@
             </form>
           </section>
         </div>
+
         <div class="filter-cards-wrapper">
           <section class="filter-results">
             <h2 class="visually-hidden">Сортировка результатов</h2>
             <p class="filter-results-title">Найдено гостиниц: <span class="filter-results-quantity">38</span></p>
-            <select class="select-control" aria-label="Сортировка">
+            <select class="select-control" aria-label="Сортировка.">
               <option value="cheap">Сначала дешевые</option>
               <option value="expensive">Сначала дорогие</option>
               <option value="popular">Сначала популярные</option>
@@ -277,6 +275,7 @@
             </ol>
           </div>
         </div>
+
         <section class="subscribe subscribe-white">
           <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
           <p class="subscribe-description">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
@@ -344,5 +343,4 @@
       </footer>
     </div>
   </body>
-
 </html>
