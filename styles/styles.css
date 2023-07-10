@@ -37,8 +37,7 @@ body {
 
 img {
   max-width: 100%;
-  height: auto;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .visually-hidden {
@@ -234,14 +233,13 @@ img {
   margin-right: 70px;
 }
 
-/*Страница индекс*/
+/*Мэйн индекс*/
 .main-index {
   flex-grow: 1;
 }
 
 .welcome {
   text-align: center;
-  background-color: #ffffff;
 }
 
 .welcome-image-wrapper {
@@ -250,15 +248,13 @@ img {
   background-repeat: no-repeat;
   background-position: center bottom, center;
   background-size: auto, cover;
-  background-color: #ffffff;
+  background-color: #e5e5e5;
   height: 485px;
-  margin-bottom: 69px;
   padding: 51px 0 82px;
 }
 
 .advantages {
   background-color: #ffffff;
-  margin-bottom: 64px;
   text-align: center;
 }
 
@@ -269,15 +265,15 @@ img {
   line-height: 36px;
   text-transform: uppercase;
   margin: 0 0 25px 0;
-  padding: 0 30px;
+  padding: 69px 30px 0 30px;
 }
 
 .welcome-description {
   font-size: 22px;
   line-height: 26px;
   color: #333333;
-  margin: 0 0 90px 0;
-  padding: 0 30px;
+  margin: 0;
+  padding: 0 30px 90px 30px;
 }
 
 .advantages-list {
@@ -332,6 +328,11 @@ img {
   margin: 30px 0 0;
 }
 
+.img-sedona,
+.img-bridge {
+  height: auto;
+}
+
 .advantages-item-light .advantages-title::after,
 .advantages-item-lightblue .advantages-title::after {
   background-color: rgba(0, 0, 0, 0.3);
@@ -371,14 +372,14 @@ img {
   text-transform: uppercase;
   display: inline-block;
   margin-bottom: 20px;
-  padding: 0 30px;
+  padding: 64px 30px 0 30px;
 }
 
 .recommendation-description {
   font-size: 22px;
   line-height: 26px;
-  margin: 0 0 64px 0;
-  padding: 0 30px;
+  margin: 0;
+  padding: 0 30px 64px 30px;
 }
 
 .recommendation-list {
@@ -512,7 +513,6 @@ img {
 
 .field:hover {
   background-color: #e6e6e6;
-  color: rgba(0, 0, 0, 0.6);
 }
 
 .field:focus {
@@ -648,7 +648,7 @@ img {
   fill: rgba(117, 97, 87, 0.3);
 }
 
-/*Страница каталога*/
+/*Мэйн каталога*/
 .main-catalog {
   flex-grow: 1;
 }
@@ -1030,6 +1030,7 @@ img {
   -webkit-appearance: none;
   appearance: none;
   background-image: url("../images/decorations/arrow-black.svg");
+  background-color: #ffffff;
   background-repeat: no-repeat;
   background-position: right 20px center;
 }
@@ -1467,10 +1468,6 @@ img {
   background-position: top 16px right 20px;
 }
 
-.search-input::placeholder {
-  opacity: 1;
-}
-
 .search-label,
 .quantity-label {
   color: #000000;
@@ -1511,8 +1508,9 @@ img {
 .quantity-label-children {
   position: relative;
   display: flex;
-  gap: 10px;
   align-items: center;
+  gap: 10px;
+  padding-left: 10px;
 }
 
 .button-minus {
