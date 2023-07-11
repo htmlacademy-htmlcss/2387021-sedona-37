@@ -233,6 +233,25 @@ img {
   margin-right: 70px;
 }
 
+/*Ниже ввожу класс на случай необходимости подключить состояния disabled у ссылок, похожих на кнопки*/
+.button-disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.button-disabled:hover {
+  background-color: #756157;
+}
+
+.button-disabled:focus {
+  background-color: #756157;
+  outline: none;
+}
+
+.button-disabled:active {
+  color: #ffffff;
+}
+
 /*Мэйн индекс*/
 .main-index {
   flex-grow: 1;
@@ -248,7 +267,7 @@ img {
   background-repeat: no-repeat;
   background-position: center bottom, center;
   background-size: auto, cover;
-  background-color: #e5e5e5;
+  background-color: #b8cae1;
   height: 485px;
   padding: 51px 0 82px;
 }
@@ -305,13 +324,13 @@ img {
 
 .advantages-title {
   width: 175px;
+  margin: 0 auto;
   color: #000000;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
   text-align: center;
-  margin: 0 auto;
 }
 
 .advantages-title::after {
@@ -440,12 +459,13 @@ img {
 }
 
 .search-title {
+  margin: 0 0 20px 0;
+  padding: 0 30px;
   color: #000000;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
-  margin: 0 0 20px 0;
-  padding: 0 30px;
+  text-transform: uppercase;
 }
 
 .search-description {
@@ -578,6 +598,7 @@ img {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  max-width: 300px;
 }
 
 .social-item {
@@ -602,11 +623,12 @@ img {
 }
 
 .footer-contacts {
-  width: 720px;
-  min-height: 50px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  max-width: 500px;
+  min-height: 50px;
 }
 
 .contacts-tel {
@@ -632,7 +654,9 @@ img {
 
 .copyright {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  max-width: 300px;
 }
 
 .logo-htmlacademy {
@@ -773,6 +797,7 @@ img {
 .catalog-label {
   position: relative;
   display: block;
+  cursor: pointer;
 }
 
 .catalog-label:hover {
@@ -791,6 +816,11 @@ img {
   background-image: url("../images/decorations/check-mark.svg");
   background-repeat: no-repeat;
   background-position: 60% 60%;
+}
+
+.catalog-input:disabled + .catalog-mark,
+.catalog-input:disabled ~ .catalog-span {
+  opacity: 0.5;
 }
 
 .catalog-mark {
