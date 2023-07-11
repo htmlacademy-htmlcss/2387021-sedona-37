@@ -37,8 +37,7 @@ body {
 
 img {
   max-width: 100%;
-  height: auto;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .visually-hidden {
@@ -234,14 +233,32 @@ img {
   margin-right: 70px;
 }
 
-/*Страница индекс*/
+/*Ниже ввожу класс на случай необходимости подключить состояния disabled у ссылок, похожих на кнопки*/
+.button-disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.button-disabled:hover {
+  background-color: #756157;
+}
+
+.button-disabled:focus {
+  background-color: #756157;
+  outline: none;
+}
+
+.button-disabled:active {
+  color: #ffffff;
+}
+
+/*Мэйн индекс*/
 .main-index {
   flex-grow: 1;
 }
 
 .welcome {
   text-align: center;
-  background-color: #ffffff;
 }
 
 .welcome-image-wrapper {
@@ -250,15 +267,13 @@ img {
   background-repeat: no-repeat;
   background-position: center bottom, center;
   background-size: auto, cover;
-  background-color: #ffffff;
+  background-color: #b8cae1;
   height: 485px;
-  margin-bottom: 69px;
   padding: 51px 0 82px;
 }
 
 .advantages {
   background-color: #ffffff;
-  margin-bottom: 64px;
   text-align: center;
 }
 
@@ -269,15 +284,15 @@ img {
   line-height: 36px;
   text-transform: uppercase;
   margin: 0 0 25px 0;
-  padding: 0 30px;
+  padding: 69px 30px 0 30px;
 }
 
 .welcome-description {
   font-size: 22px;
   line-height: 26px;
   color: #333333;
-  margin: 0 0 90px 0;
-  padding: 0 30px;
+  margin: 0;
+  padding: 0 30px 90px 30px;
 }
 
 .advantages-list {
@@ -309,13 +324,13 @@ img {
 
 .advantages-title {
   width: 175px;
+  margin: 0 auto;
   color: #000000;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
   text-align: center;
-  margin: 0 auto;
 }
 
 .advantages-title::after {
@@ -330,6 +345,11 @@ img {
 .advantages-description {
   position: relative;
   margin: 30px 0 0;
+}
+
+.img-sedona,
+.img-bridge {
+  height: auto;
 }
 
 .advantages-item-light .advantages-title::after,
@@ -371,14 +391,14 @@ img {
   text-transform: uppercase;
   display: inline-block;
   margin-bottom: 20px;
-  padding: 0 30px;
+  padding: 64px 30px 0 30px;
 }
 
 .recommendation-description {
   font-size: 22px;
   line-height: 26px;
-  margin: 0 0 64px 0;
-  padding: 0 30px;
+  margin: 0;
+  padding: 0 30px 64px 30px;
 }
 
 .recommendation-list {
@@ -439,12 +459,13 @@ img {
 }
 
 .search-title {
+  margin: 0 0 20px 0;
+  padding: 0 30px;
   color: #000000;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
-  margin: 0 0 20px 0;
-  padding: 0 30px;
+  text-transform: uppercase;
 }
 
 .search-description {
@@ -512,7 +533,6 @@ img {
 
 .field:hover {
   background-color: #e6e6e6;
-  color: rgba(0, 0, 0, 0.6);
 }
 
 .field:focus {
@@ -578,6 +598,7 @@ img {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  max-width: 300px;
 }
 
 .social-item {
@@ -602,11 +623,12 @@ img {
 }
 
 .footer-contacts {
-  width: 720px;
-  min-height: 50px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  max-width: 500px;
+  min-height: 50px;
 }
 
 .contacts-tel {
@@ -632,7 +654,9 @@ img {
 
 .copyright {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  max-width: 300px;
 }
 
 .logo-htmlacademy {
@@ -648,7 +672,7 @@ img {
   fill: rgba(117, 97, 87, 0.3);
 }
 
-/*Страница каталога*/
+/*Мэйн каталога*/
 .main-catalog {
   flex-grow: 1;
 }
@@ -773,6 +797,7 @@ img {
 .catalog-label {
   position: relative;
   display: block;
+  cursor: pointer;
 }
 
 .catalog-label:hover {
@@ -791,6 +816,11 @@ img {
   background-image: url("../images/decorations/check-mark.svg");
   background-repeat: no-repeat;
   background-position: 60% 60%;
+}
+
+.catalog-input:disabled + .catalog-mark,
+.catalog-input:disabled ~ .catalog-span {
+  opacity: 0.5;
 }
 
 .catalog-mark {
@@ -1030,6 +1060,7 @@ img {
   -webkit-appearance: none;
   appearance: none;
   background-image: url("../images/decorations/arrow-black.svg");
+  background-color: #ffffff;
   background-repeat: no-repeat;
   background-position: right 20px center;
 }
@@ -1467,10 +1498,6 @@ img {
   background-position: top 16px right 20px;
 }
 
-.search-input::placeholder {
-  opacity: 1;
-}
-
 .search-label,
 .quantity-label {
   color: #000000;
@@ -1511,8 +1538,9 @@ img {
 .quantity-label-children {
   position: relative;
   display: flex;
-  gap: 10px;
   align-items: center;
+  gap: 10px;
+  padding-left: 10px;
 }
 
 .button-minus {
