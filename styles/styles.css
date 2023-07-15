@@ -25,7 +25,7 @@ html {
 }
 
 body {
-  min-width: 1200px;
+  min-width: 1280px;
   margin: 0;
   font-family: "PT Sans", "Arial", sans-serif;
   font-weight: 400;
@@ -182,12 +182,12 @@ img {
   font-size: 10px;
   line-height: 10px;
   text-align: center;
-  width: 20px;
+  min-width: 20px;
   height: 20px;
-  border-radius: 10px;
+  border-radius: 50%;
   color: #ffffff;
   background-color: #7db54f;
-  padding-top: 5px;
+  padding: 5px 1px;
 }
 
 .button {
@@ -1096,8 +1096,10 @@ img {
   display: block;
   width: 48px;
   height: 48px;
+  background-color: #ffffff;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .card-grid-toggle:hover {
@@ -1119,8 +1121,9 @@ img {
   background-position: center center;
 }
 
-.card-grid-toggle-current {
+.card-current {
   border: 2px solid #000000;
+  cursor: default;
 }
 
 .card-toggle-item:nth-of-type(2) .card-grid-toggle {
@@ -1154,6 +1157,63 @@ img {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+}
+
+/*Раскладка карточек крупным списком */
+.big-list {
+  grid-template-columns: 1fr;
+}
+
+.big-list .hotel-card {
+  width: 100%;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.big-list .hotel-card-link {
+  justify-self: center;
+}
+
+.big-list .product-card-stars {
+  justify-self: center;
+}
+
+/*Раскладка карточек списком */
+.list {
+  grid-template-columns: 1fr;
+}
+
+.list .hotel-card {
+  width: 100%;
+  grid-template-columns: 300px 1fr 1fr 1fr;
+  grid-template-rows: 96px 96px;
+  min-height: 212px;
+  align-items: center;
+}
+
+.list .hotel-card-link {
+  justify-self: center;
+  grid-column: 1/2;
+  grid-row: 1/-1;
+}
+
+.list .hotel-card-link:nth-of-type(2) {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+.list .product-card-status {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+.list .product-card-price {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+.list .product-card-stars {
+  justify-self: center;
+  align-self: auto;
 }
 
 .hotel-card {
