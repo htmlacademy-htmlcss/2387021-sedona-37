@@ -120,11 +120,11 @@
                   <div class="range-wrapper-inputs">
                     <label class="catalog-filter-label">
                       <span class="label-wrapper">от</span><input class="range-input input-min" type="number" value="0"
-                        min="0" name="min-price">
+                        min="0" max="100000" step="1" name="min-price">
                     </label>
                     <label class="catalog-filter-label">
                       <span class="label-wrapper">до</span><input class="range-input input-max" type="number"
-                        value="9000" min="0" name="max-price">
+                        value="9000" min="0" max="100000" step="1" name="max-price">
                     </label>
                   </div>
                   <div class="range-scale">
@@ -158,25 +158,28 @@
             </select>
             <ul class="card-toggle-list">
               <li class="card-toggle-item">
-                <a class="card-grid-toggle card-grid-toggle-current" href="#">
-                  <span class="visually-hidden view-current">Показать карточки</span>
-                </a>
+                <button class="card-grid-toggle card-tile card-current" type="button">
+                  <span class="visually-hidden view-current">Размещение плиткой</span>
+                </button>
               </li>
               <li class="card-toggle-item">
-                <a class="card-grid-toggle" href="#">
-                  <span class="visually-hidden">Показать полностью</span>
-                </a>
+                <button class="card-grid-toggle card-big-list" type="button">
+                  <span class="visually-hidden">Размещение крупным списком</span>
+                </button>
               </li>
               <li class="card-toggle-item">
-                <a class="card-grid-toggle" href="#">
-                  <span class="visually-hidden">Показать список</span>
-                </a>
+                <button class="card-grid-toggle card-list" type="button">
+                  <span class="visually-hidden">Размещение списком</span>
+                </button>
               </li>
             </ul>
           </section>
 
           <section class="hotel-cards">
             <h2 class="visually-hidden">Отсортированные гостиницы</h2>
+            <!-- Чтобы список отображался в "плиточной" раскладке, у него должен быть только класс hotel-cards-list -->
+            <!-- Чтобы список отображался в "крупный список" раскладке, нужно добавить ему второй класс big-list -->
+            <!-- Чтобы список отображался в "список" раскладке, нужно добавить ему второй класс list -->
             <ul class="hotel-cards-list">
               <li class="hotel-card">
                 <a class="hotel-card-link" href="#">
@@ -207,7 +210,7 @@
                 <p class="product-card-status">Гостиница</p>
                 <p class="product-card-price">От 5000 ₽</p>
                 <a class="button button-about" href="#">Подробнее</a>
-                <button class="button button-favorites-current" type="button">В избранном</button>
+                <button class="button button-favorites button-favorites-current" type="button">В избранном</button>
                 <p class="product-card-stars stars-4">
                   <span class="visually-hidden">4 звезды</span>
                 </p>
@@ -342,5 +345,7 @@
         </section>
       </footer>
     </div>
+    <script src="scripts/catalogFavorites.js"></script>
+    <script src="scripts/catalogView.js"></script>
   </body>
 </html>
